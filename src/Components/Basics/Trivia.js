@@ -9,6 +9,12 @@ const Trivia = ({ data, setTimeOut, questionNumber, setQuestionNumber }) => {
     setQuestion(data[questionNumber - 1]);
   }, [data, questionNumber]);
 
+  const delay=(duration, callback)=>{
+    setTimeOut(()=>{
+      callback();
+    },duration);
+  };
+
 //   const handleClick = (a) => {
 //     setSelectedAnswer(a);
 //     setClassName("answer active");
@@ -20,10 +26,27 @@ const Trivia = ({ data, setTimeOut, questionNumber, setQuestionNumber }) => {
 const handleClick = (a) => {
     setSelectedAnswer(a);
     setClassName("answer active");
-    setTimeOut(() => {
-      setClassName(a.correct ? "answer correct" : "answer wrong");
-    }, 3000);
+    delay(3000,()=>{
+      setClassName(a.correct ? "answer correct" : "answer wrong")
+    });
+    delay(60000,()=>{
+      if(a.correct){
+        setQuestionNumber(prev=>prev + 1);
+        setSelectedAnswer(null);
+      }else{
+        setTimeOut(true);
+      }
+    });
+    // setTimeOut(() => {
+    //   setClassName(a.correct ? "answer correct" : "answer wrong");
+    // }, 3000);
   };
+
+
+
+
+
+
   
   return (
     <>
@@ -44,3 +67,8 @@ const handleClick = (a) => {
 };
 
 export default Trivia;
+
+
+
+
+

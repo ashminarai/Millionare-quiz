@@ -129,7 +129,40 @@
         background: rgb(151, 19, 19);
     }
 } */
-.answer.correct {
+/* .answer.correct {
+    animation: correctAnimation 3s ease forwards;
+  }
+  
+  @keyframes correctAnimation {
+    0%, 22%, 42% {
+      background: mediumblue;
+    }
+    20%, 40%, 60% {
+      background: linear-gradient(#100241, blue);
+    }
+    62%, 100% {
+      background: green;
+    }
+  }
+  
+  .answer.wrong {
+    animation: wrongAnimation 3s ease forwards;
+  }
+  
+  @keyframes wrongAnimation {
+    0%, 22%, 42% {
+      background: mediumblue;
+    }
+    20%, 40%, 60% {
+      background: linear-gradient(#100241, blue);
+    }
+    62%, 100% {
+      background: rgb(151, 19, 19);
+    }
+  }
+   */
+
+   .answer.correct {
     animation: correctAnimation 3s ease forwards;
   }
   
