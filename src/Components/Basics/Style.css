@@ -7,12 +7,15 @@
 .main{
     width:75%;
     background: linear-gradient(to bottom, rgba(0, 0, 0 ,0), #020230), url("./bg.jpeg") center;
+    display:flex;
+    flex-direction: column;
 }
 .pyramid{
     width: 25%;
     display:flex;
     align-items:center;
     justify-content:center;
+    line-height: 2.2;
 }
 .moneyList{
     list-style: none;
@@ -35,4 +38,79 @@
 .moneyListItemAmount{
     font-size: 20px;
     font-weight: 300;
+}
+.top{
+    height:50%;
+    position: relative;
+}
+.bottom{
+    height:50%;
+}
+.timer{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    border: 5px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    bottom:10px;
+    left:80px;
+}
+.trivia{
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+}
+.question{
+    width:80%;
+    background:linear-gradient(#100241, blue);
+    opacity: 0.8;
+    border: 2px solid goldenrod;
+    text-align: center;
+    padding:20px;
+    border-radius: 10px;
+    font-size:20px;
+}
+.answers{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+.answer{
+    width:40%;
+    padding:10px;
+    text-align:center;
+    background:lxinear-gradient(#100241, blue);
+    border: 1px solid goldenrod;
+    border-radius: 15px;
+    font-size:20px;
+    font-weight:300;
+    margin: 0 10px 20px 10px;
+    cursor:pointer;
+}
+.answer:hover, .answer.active{
+ background:linear-gradient(#100241, blue);
+ opacity: 0.5;
+}
+.answer.correct{
+    animation: correct 3s ease forwards;
+}
+@keyframes correct{
+    0%, 22%, 42%{
+        background:mediumblue;
+    }
+    20%, 40%, 60%{
+        background:linear-gradient(#100241, blue);
+    }
+    62%, 100%{
+        background: green;
+    }
 }

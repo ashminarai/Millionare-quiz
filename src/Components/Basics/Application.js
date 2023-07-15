@@ -1,10 +1,10 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./Style.css";
+import Trivia from "./Trivia";
 
 const Application = () => {
-
   // creating useState Hook
-  const [questionNumber, setQuestionNumber] = useState(1)
+  const [questionNumber, setQuestionNumber] = useState(1);
 
   // defining a React functional component called MoneyPyramid.
   const moneyPyramid = [
@@ -72,14 +72,28 @@ const Application = () => {
   return (
     <>
       <div className="app">
-        <div className="main">main</div>
+        <div className="main">
+          <div className="top">
+            <div className="timer">
+              30
+            </div>
+          </div>
+          <div className="bottom">
+            <Trivia/>
+          </div>
+        </div>
         <div className="pyramid">
           <ul className="moneyList">
-
-            {moneyPyramid.map((m)=>(
-              <li className={questionNumber === m.id ? "moneyListItem active" : "moneyListItem"}>
-              <span className="moneyListItemNumber">{m.id}</span>
-              <span className="moneyListItemAmount">{m.amount}</span>
+            {moneyPyramid.map((m) => (
+              <li
+                className={
+                  questionNumber === m.id
+                    ? "moneyListItem active"
+                    : "moneyListItem"
+                }
+              >
+                <span className="moneyListItemNumber">{m.id}</span>
+                <span className="moneyListItemAmount">{m.amount}</span>
               </li>
             ))}
           </ul>
