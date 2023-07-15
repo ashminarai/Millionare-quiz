@@ -5,6 +5,78 @@ import Trivia from "./Trivia";
 const Application = () => {
   // creating useState Hook
   const [questionNumber, setQuestionNumber] = useState(1);
+  const [timeOut, setTimeOut] = useState(false);
+
+  const data = [
+    {
+      id: 1,
+      question: "After it stops raining, the umbrella becomes burden to people, what does it mean?",
+      answers: [
+        {
+          text: "A. They find it difficult to carry umbrella",
+          correct: false,
+        },
+        {
+          text: "B. People dislike umbrella",
+          correct: false,
+        },
+        {
+          text: "C. When individuals fulfill their desires and encounter new faces, they often overlook the ones who have been there for them from the very start. They fail to acknowledge the unwavering support and presence of those individuals who have stood by them throughout their journey, leaving behind a sense of emotional neglect.",
+          correct: true,
+        },
+        {
+          text: "D. Umbrella is heavy so they don't like to carry it.",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 2,
+      question: "When was I born?",
+      answers: [
+        {
+          text: "A. 2000",
+          correct: false,
+        },
+        {
+          text: "B. 2001",
+          correct: true,
+        },
+        {
+          text: "C. 2003",
+          correct: false,
+        },
+        {
+          text: "D. 2002",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 3,
+      question: "Who is the friend that you miss the most but no longer speak with?",
+      answers: [
+        {
+          text: "A. Sachin Dahal",
+          correct: true,
+        },
+        {
+          text: "B. Anjila Rai",
+          correct: false,
+        },
+        {
+          text: "C. Dipa Yakkha",
+          correct: false,
+        },
+        {
+          text: "D. Manoj Rai",
+          correct: false,
+        },
+      ],
+    },
+    
+  ];
+  
 
   // defining a React functional component called MoneyPyramid.
   const moneyPyramid = [
@@ -74,12 +146,10 @@ const Application = () => {
       <div className="app">
         <div className="main">
           <div className="top">
-            <div className="timer">
-              30
-            </div>
+            <div className="timer">30</div>
           </div>
           <div className="bottom">
-            <Trivia/>
+            <Trivia data={data} setTimeOut={setTimeOut} questionNumber={questionNumber} setQuestionNumber={setQuestionNumber}/>
           </div>
         </div>
         <div className="pyramid">

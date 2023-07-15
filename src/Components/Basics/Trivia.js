@@ -1,17 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-const Trivia = () => {
+const Trivia = ({ data, setTimeOut, questionNumber, setQuestionNumber }) => {
+  const [question, setQuestion] = useState(null);
+
+  useEffect(() => {
+    setQuestion(data[questionNumber - 1]);
+  }, [data, questionNumber]);
+
   return (
     <>
       <div className="trivia">
-        <div className="question">
-          Who is the friend that you miss the most but no longer speak with?
-        </div>
+        <div className="question">{question?.question}</div>
         <div className="answers">
-          <div className="answer correct">Sachin Dahal</div>
-          <div className="answer">Sachin Dahal</div>
-          <div className="answer">Sachin Dahal</div>
-          <div className="answer">Sachin Dahal</div>
+          {question?.answers.map((a) => {
+            return <div className="answer">{a.text}</div>;
+          })}
         </div>
       </div>
     </>
@@ -19,3 +22,4 @@ const Trivia = () => {
 };
 
 export default Trivia;
+

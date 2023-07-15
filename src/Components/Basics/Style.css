@@ -114,3 +114,18 @@
         background: green;
     }
 }
+
+.answer.wrong{
+    animation: correct 3s ease forwards;
+}
+@keyframes correct{
+    0%, 22%, 42%{
+        background:mediumblue;
+    }
+    20%, 40%, 60%{
+        background:linear-gradient(#100241, blue);
+    }
+    62%, 100%{
+        background: rgb(151, 19, 19);
+    }
+}
