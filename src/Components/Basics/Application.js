@@ -6,11 +6,12 @@ const Application = () => {
   // creating useState Hook
   const [questionNumber, setQuestionNumber] = useState(1);
   const [timeOut, setTimeOut] = useState(false);
-
+  const [earned, setEarned] = useState("$ 0");
   const data = [
     {
       id: 1,
-      question: "After it stops raining, the umbrella becomes burden to people, what does it mean?",
+      question:
+        "After it stops raining, the umbrella becomes burden to people, what does it mean?",
       answers: [
         {
           text: "A. They think it is not necessary to carry umbrella anymore.",
@@ -54,7 +55,8 @@ const Application = () => {
     },
     {
       id: 3,
-      question: "Who is the friend that you miss the most but no longer speak with?",
+      question:
+        "Who is the friend that you miss the most but no longer speak with?",
       answers: [
         {
           text: "A. Sachin Dahal",
@@ -74,9 +76,7 @@ const Application = () => {
         },
       ],
     },
-    
   ];
-  
 
   // defining a React functional component called MoneyPyramid.
   const moneyPyramid = [
@@ -145,12 +145,23 @@ const Application = () => {
     <>
       <div className="app">
         <div className="main">
-          <div className="top">
-            <div className="timer">30</div>
-          </div>
-          <div className="bottom">
-            <Trivia data={data} setTimeOut={setTimeOut} questionNumber={questionNumber} setQuestionNumber={setQuestionNumber}/>
-          </div>
+          {timeOut ? (
+            <h1>You earned: {earned} </h1>
+          ) : (
+            <>
+              <div className="top">
+                <div className="timer">30</div>
+              </div>
+              <div className="bottom">
+                <Trivia
+                  data={data}
+                  setTimeOut={setTimeOut}
+                  questionNumber={questionNumber}
+                  setQuestionNumber={setQuestionNumber}
+                />
+              </div>
+            </>
+          )}
         </div>
         <div className="pyramid">
           <ul className="moneyList">
