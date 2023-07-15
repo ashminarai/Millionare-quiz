@@ -13,11 +13,11 @@ const Application = () => {
       question: "After it stops raining, the umbrella becomes burden to people, what does it mean?",
       answers: [
         {
-          text: "A. They find it difficult to carry umbrella",
+          text: "A. They think it is not necessary to carry umbrella anymore.",
           correct: false,
         },
         {
-          text: "B. People dislike umbrella",
+          text: "B. They like to stay in sun.",
           correct: false,
         },
         {
