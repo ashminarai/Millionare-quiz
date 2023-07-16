@@ -1,53 +1,43 @@
 // import React, { useState, useEffect } from "react";
+// import useSound from "use-sound";
+// import play from  "./play.mp3";
+// import correct from  "./correct.mp3";
+// import wrong from "./wrong.mp3";
 
 // const Trivia = ({ data, setTimeOut, questionNumber, setQuestionNumber }) => {
 //   const [question, setQuestion] = useState(null);
 //   const [selectedAnswer, setSelectedAnswer] = useState(null);
 //   const [className, setClassName] = useState("answer");
+//   const [letsPlay] = useSound(play);
+//   const [correctAnswer] = useSound(correct);
+//   const [wrongAnswer] = useSound(wrong);
 
+//   useEffect(()=>{
+//     letsPlay();
+//   },[letsPlay]);
 //   useEffect(() => {
 //     setQuestion(data[questionNumber - 1]);
 //   }, [data, questionNumber]);
 
-//   const delay=(duration, callback)=>{
-//     setTimeOut(()=>{
-//       callback();
-//     },duration);
-//   };
-
-// //   const handleClick = (a) => {
-// //     setSelectedAnswer(a);
-// //     setClassName("answer active");
-// //     setTimeOut(()=>{
-// //         setClassName(a.correct ? "answer correct" : "answer wrong");
-// //     },3000)
-// //   };
-
-// const handleClick = (a) => {
+//   const handleClick = (a) => {
 //     setSelectedAnswer(a);
 //     setClassName("answer active");
-//     delay(3000,()=>{
-//       setClassName(a.correct ? "answer correct" : "answer wrong")
-//     });
-//     delay(60000,()=>{
-//       if(a.correct){
-//         setQuestionNumber(prev=>prev + 1);
+
+//     setTimeout(() => {
+//       setClassName(a.correct ? "answer correct" : "answer wrong");
+//     }, 3000);
+
+//     setTimeout( () => {
+//       if (a.correct) {
+//         correctAnswer();
+//         setQuestionNumber((prev) => prev + 1);
 //         setSelectedAnswer(null);
-//       }else{
+//       } else {
 //         setTimeOut(true);
 //       }
-//     });
-//     // setTimeOut(() => {
-//     //   setClassName(a.correct ? "answer correct" : "answer wrong");
-//     // }, 3000);
+//     }, 6000);
 //   };
 
-
-
-
-
-
-  
 //   return (
 //     <>
 //       <div className="trivia">
@@ -55,7 +45,10 @@
 //         <div className="answers">
 //           {question?.answers.map((a) => {
 //             return (
-//               <div className={selectedAnswer === a ? className : "answer"} onClick={() => handleClick(a)}>
+//               <div
+//                 className={selectedAnswer === a ? className : "answer"}
+//                 onClick={() => handleClick(a)}
+//               >
 //                 {a.text}
 //               </div>
 //             );
@@ -69,59 +62,89 @@
 // export default Trivia;
 
 
+import { useEffect, useState } from "react";
+import useSound from "use-sound";
+import play from "./play.mp3";
+import correct from "./correct.mp3";
+import wrong from "./wrong.mp3";
 
-import React, { useState, useEffect } from "react";
-
-const Trivia = ({ data, setTimeOut, questionNumber, setQuestionNumber }) => {
+export default function Trivia({
+  data,
+  questionNumber,
+  setQuestionNumber,
+  setTimeOut,
+}) {
   const [question, setQuestion] = useState(null);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [className, setClassName] = useState("answer");
+  const [letsPlay] = useSound(play);
+  const [correctAnswer] = useSound(correct);
+  const [wrongAnswer] = useSound(wrong);
+
+  useEffect(() => {
+    letsPlay();
+  }, [letsPlay]);
 
   useEffect(() => {
     setQuestion(data[questionNumber - 1]);
   }, [data, questionNumber]);
 
+  const delay = (duration, callback) => {
+    setTimeout(() => {
+      callback();
+    }, duration);
+  };
+
   const handleClick = (a) => {
     setSelectedAnswer(a);
     setClassName("answer active");
-
-    setTimeout(() => {
+    delay(3000, () => {
       setClassName(a.correct ? "answer correct" : "answer wrong");
-    }, 3000);
+    });
+    // setTimeout(() => {
+    //   setClassName(a.correct ? "answer correct" : "answer wrong");
+    // }, 3000);
 
-    setTimeout(() => {
+    // setTimeout(() => {
+      delay(5000, () => {
       if (a.correct) {
-        setQuestionNumber((prev) => prev + 1);
-        setSelectedAnswer(null);
+        correctAnswer();
+        delay(7000, () => {
+          setQuestionNumber((prev) => prev + 1);
+          setSelectedAnswer(null);
+        });
+        // setTimeout(() => {
+        //   setQuestionNumber((prev) => prev + 1);
+        //   setSelectedAnswer(null);
+        // }, 1000);
       } else {
-        setTimeOut(true);
+        wrongAnswer();
+        delay(1000, () => {
+          setTimeOut(true);
+        });
+        // setTimeout(() => {
+        //   setTimeOut(true);
+        // }, 1000);
       }
-    }, 6000);
+    // }, 5000);
+      })
   };
-
   return (
-    <>
-      <div className="trivia">
-        <div className="question">{question?.question}</div>
-        <div className="answers">
-          {question?.answers.map((a) => {
-            return (
-              <div
-                className={selectedAnswer === a ? className : "answer"}
-                onClick={() => handleClick(a)}
-              >
-                {a.text}
-              </div>
-            );
-          })}
-        </div>
+    <div className="trivia">
+      <div className="question">{question?.question}</div>
+      <div className="answers">
+        {question?.answers.map((a) => (
+          <div
+            className={selectedAnswer === a ? className : "answer"}
+            onClick={() => !selectedAnswer && handleClick(a)}
+          >
+            {a.text}
+          </div>
+        ))}
       </div>
-    </>
+    </div>
   );
-};
-
-export default Trivia;
-
+}
 
 
 
