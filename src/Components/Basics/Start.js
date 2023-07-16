@@ -9,7 +9,11 @@ export default function Start({ setUsername }) {
 
   return (
     <div className="start">
-      <input
+        {/* <div className="startcontent1">
+            <img src="../Images/background.jpeg" alt="" className="startbg"></img>
+        </div> */}
+    {/* <div className="startcontent2"> */}
+        <input
         className="startInput"
         placeholder="enter your name"
         ref={inputRef}
@@ -17,6 +21,8 @@ export default function Start({ setUsername }) {
       <button className="startButton" onClick={handleClick}>
         Start
       </button>
-    </div>
+        </div>
+    
+    // </div>
   );
 }
