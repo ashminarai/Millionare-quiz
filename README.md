@@ -29,11 +29,13 @@ The Millionaire Quiz Application was built using the following technologies:
 React: A JavaScript library for building user interfaces.
 
 **Directory Structure 📂**
+
 The code is organized into the following directory structure:
 
 src: Contains the source code files.
-App.js: The main component that renders the application.
-Style.css: CSS file for styling the application.
-Trivia.js: Component responsible for displaying and managing the trivia questions.
-Timer.js: Component for the countdown timer.
-Start.js: Component for the start screen.
+
+- App.js: The main component that renders the application.
+- Style.css: CSS file for styling the application.
+- Trivia.js: Component responsible for displaying and managing the trivia questions.
+- Timer.js: Component for the countdown timer.
+- Start.js: Component for the start screen.
