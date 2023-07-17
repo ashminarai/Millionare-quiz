@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+**💰 Millionaire Quiz Application 💰**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a Millionaire Quiz Application built with React. It allows users to participate in a trivia game where they can answer multiple-choice questions and try to earn as much virtual money as possible. The application features a timer ⏰, a money pyramid displaying the prize amounts 💲, and a start screen where users can enter their names to begin the game.
 
-## Available Scripts
+**How to Run the Code 💻**
+To run this code locally, follow these steps:
 
-In the project directory, you can run:
+1. Clone the repository to your local machine or download the source code as a ZIP file and extract it.
+2. Open the project directory in your code editor.
+3. Make sure you have a package manager like npm or yarn installed on your machine.
+4. Install the project dependencies by running the following command in the terminal
 
-### `npm start`
+   -npm install
+   
+5. Once the installation is complete, start the application by running the following command:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+   -npm start
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+6. The application will be launched in your default web browser at http://localhost:3000.
 
-### `npm test`
+**How to Play the Game 🎮**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+On the start screen, enter your name in the input field and click the "Start" button. You will be presented with a question and four possible answers. Choose the correct answer by clicking on it. If you select the correct answer, you will move on to the next question, and your earned amount will increase based on the money pyramid. If you select the wrong answer, the game will end, and your final earned amount will be displayed. A timer ⏰ is provided to ensure you answer the questions within a specific time limit. If the time runs out, the game will end. The money pyramid 💲 on the right side of the screen shows the prize amounts you can earn for each question. The higher the question number, the higher the prize amount. Enjoy playing the Millionaire Quiz and test your knowledge!
 
-### `npm run build`
+**Technologies Used 🛠️**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The Millionaire Quiz Application was built using the following technologies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+React: A JavaScript library for building user interfaces.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Directory Structure 📂**
+The code is organized into the following directory structure:
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+src: Contains the source code files.
+App.js: The main component that renders the application.
+Style.css: CSS file for styling the application.
+Trivia.js: Component responsible for displaying and managing the trivia questions.
+Timer.js: Component for the countdown timer.
+Start.js: Component for the start screen.
