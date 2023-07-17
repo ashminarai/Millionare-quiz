@@ -3,7 +3,8 @@
 This is a Millionaire Quiz Application built with React. It allows users to participate in a trivia game where they can answer multiple-choice questions and try to earn as much virtual money as possible. The application features a timer ⏰, a money pyramid displaying the prize amounts 💲, and a start screen where users can enter their names to begin the game.
 
 **How to Run the Code 💻**
-To run this code locally, follow these steps:
+
+- To run this code locally, follow these steps:
 
 1. Clone the repository to your local machine or download the source code as a ZIP file and extract it.
 2. Open the project directory in your code editor.
