@@ -58,22 +58,298 @@ const Application = () => {
     {
       id: 3,
       question:
-        "Who is the friend that you miss the most but no longer speak with?",
+        "One day in a retrospect, a years of struggle will strike you as the most beautiful, what does this statement mean?",
       answers: [
         {
-          text: "A. Sachin Dahal",
+          text: "A. After some years, you will get successful.",
+          correct: false,
+        },
+        {
+          text: "B. You will overcome failure",
+          correct: false,
+        },
+        {
+          text: "C. You hard will pay off.",
           correct: true,
         },
         {
-          text: "B. Anjila Rai",
+          text: "D. None of the above",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 4,
+      question:
+        "Buddha was born in?",
+      answers: [
+        {
+          text: "A. China",
           correct: false,
         },
         {
-          text: "C. Dipa Yakkha",
+          text: "B. Nepal",
+          correct: true,
+        },
+        {
+          text: "C. India",
           correct: false,
         },
         {
-          text: "D. Manoj Rai",
+          text: "D. Bhutan",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 5,
+      question:
+        "Buddha was born in?",
+      answers: [
+        {
+          text: "A. China",
+          correct: false,
+        },
+        {
+          text: "B. Nepal",
+          correct: true,
+        },
+        {
+          text: "C. India",
+          correct: false,
+        },
+        {
+          text: "D. Bhutan",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 6,
+      question:
+        "Buddha was born in?",
+      answers: [
+        {
+          text: "A. China",
+          correct: false,
+        },
+        {
+          text: "B. Nepal",
+          correct: true,
+        },
+        {
+          text: "C. India",
+          correct: false,
+        },
+        {
+          text: "D. Bhutan",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 7,
+      question:
+        "Buddha was born in?",
+      answers: [
+        {
+          text: "A. China",
+          correct: false,
+        },
+        {
+          text: "B. Nepal",
+          correct: true,
+        },
+        {
+          text: "C. India",
+          correct: false,
+        },
+        {
+          text: "D. Bhutan",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 8,
+      question:
+        "Buddha was born in?",
+      answers: [
+        {
+          text: "A. China",
+          correct: false,
+        },
+        {
+          text: "B. Nepal",
+          correct: true,
+        },
+        {
+          text: "C. India",
+          correct: false,
+        },
+        {
+          text: "D. Bhutan",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 9,
+      question:
+        "Buddha was born in?",
+      answers: [
+        {
+          text: "A. China",
+          correct: false,
+        },
+        {
+          text: "B. Nepal",
+          correct: true,
+        },
+        {
+          text: "C. India",
+          correct: false,
+        },
+        {
+          text: "D. Bhutan",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 10,
+      question:
+        "Buddha was born in?",
+      answers: [
+        {
+          text: "A. China",
+          correct: false,
+        },
+        {
+          text: "B. Nepal",
+          correct: true,
+        },
+        {
+          text: "C. India",
+          correct: false,
+        },
+        {
+          text: "D. Bhutan",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 11,
+      question:
+        "Buddha was born in?",
+      answers: [
+        {
+          text: "A. China",
+          correct: false,
+        },
+        {
+          text: "B. Nepal",
+          correct: true,
+        },
+        {
+          text: "C. India",
+          correct: false,
+        },
+        {
+          text: "D. Bhutan",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 12,
+      question:
+        "Buddha was born in?",
+      answers: [
+        {
+          text: "A. China",
+          correct: false,
+        },
+        {
+          text: "B. Nepal",
+          correct: true,
+        },
+        {
+          text: "C. India",
+          correct: false,
+        },
+        {
+          text: "D. Bhutan",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 13,
+      question:
+        "Buddha was born in?",
+      answers: [
+        {
+          text: "A. China",
+          correct: false,
+        },
+        {
+          text: "B. Nepal",
+          correct: true,
+        },
+        {
+          text: "C. India",
+          correct: false,
+        },
+        {
+          text: "D. Bhutan",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 14,
+      question:
+        "Buddha was born in?",
+      answers: [
+        {
+          text: "A. China",
+          correct: false,
+        },
+        {
+          text: "B. Nepal",
+          correct: true,
+        },
+        {
+          text: "C. India",
+          correct: false,
+        },
+        {
+          text: "D. Bhutan",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 15,
+      question:
+        "Buddha was born in?",
+      answers: [
+        {
+          text: "A. China",
+          correct: false,
+        },
+        {
+          text: "B. Nepal",
+          correct: true,
+        },
+        {
+          text: "C. India",
+          correct: false,
+        },
+        {
+          text: "D. Bhutan",
           correct: false,
         },
       ],
@@ -155,97 +431,53 @@ const Application = () => {
   return (
     <>
       <div className="app">
-      {!username ? (
-        <Start setUsername={setUsername} />
-      ) : (
-        <>
-          <div className="main">
-            {timeOut ? (
-              <h1 className="endText">You earned: {earned}</h1>
-            ) : (
-              <>
-                <div className="top">
-                  <div className="timer">
-                    <Timer
-                      setTimeOut={setTimeOut}
+        {!username ? (
+          <Start setUsername={setUsername} />
+        ) : (
+          <>
+            <div className="main">
+              {timeOut ? (
+                <h1 className="endText">You earned: {earned}</h1>
+              ) : (
+                <>
+                  <div className="top">
+                    <div className="timer">
+                      <Timer
+                        setTimeOut={setTimeOut}
+                        questionNumber={questionNumber}
+                      />
+                    </div>
+                  </div>
+                  <div className="bottom">
+                    <Trivia
+                      data={data}
                       questionNumber={questionNumber}
+                      setQuestionNumber={setQuestionNumber}
+                      setTimeOut={setTimeOut}
                     />
                   </div>
-                </div>
-                <div className="bottom">
-                  <Trivia
-                    data={data}
-                    questionNumber={questionNumber}
-                    setQuestionNumber={setQuestionNumber}
-                    setTimeOut={setTimeOut}
-                  />
-                </div>
-              </>
-            )}
-          </div>
-          <div className="pyramid">
-            <ul className="moneyList">
-              {moneyPyramid.map((m) => (
-                <li
-                  className={
-                    questionNumber === m.id
-                      ? "moneyListItem active"
-                      : "moneyListItem"
-                  }
-                >
-                  <span className="moneyListItemNumber">{m.id}</span>
-                  <span className="moneyListItemAmount">{m.amount}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </>
-      )}
-    </div>
-         
-
-        {/* <div className="main">
-          {timeOut ? (
-            <h1 className="endText">You earned: {earned} </h1>
-          ) : (
-            <>
-              <div className="top">
-                <div className="timer">
-                  <Timer
-                    setTimeOut={setTimeOut}
-                    questionNumber={questionNumber}
-                  />
-                </div>
-              </div>
-              =
-              <div className="bottom">
-                <Trivia
-                  data={data}
-                  setTimeOut={setTimeOut}
-                  questionNumber={questionNumber}
-                  setQuestionNumber={setQuestionNumber}
-                />
-              </div>
-            </>
-          )}
-        </div>
-        <div className="pyramid">
-          <ul className="moneyList">
-            {moneyPyramid.map((m) => (
-              <li
-                className={
-                  questionNumber === m.id
-                    ? "moneyListItem active"
-                    : "moneyListItem"
-                }
-              >
-                <span className="moneyListItemNumber">{m.id}</span>
-                <span className="moneyListItemAmount">{m.amount}</span>
-              </li>
-            ))}
-          </ul>
-        </div> */}
-      
+                </>
+              )}
+            </div>
+            <div className="pyramid">
+              <ul className="moneyList">
+                {moneyPyramid.map((m) => (
+                  <li
+                    className={
+                      questionNumber === m.id
+                        ? "moneyListItem active"
+                        : "moneyListItem"
+                    }
+                  >
+                    <span className="moneyListItemNumber">{m.id}</span>
+                    <span className="moneyListItemAmount">{m.amount}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </>
+        )}
+      </div>
     </>
   );
 };
