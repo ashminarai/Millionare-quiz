@@ -353,7 +353,7 @@ const Application = () => {
           correct: false,
         },
       ],
-    },
+    }
   ];
 
   // defining a React functional component called MoneyPyramid.
