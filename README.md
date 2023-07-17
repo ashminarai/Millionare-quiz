@@ -32,6 +32,7 @@ React: A JavaScript library for building user interfaces.
 **Directory Structure 📂**
 
 The code is organized into the following directory structure:
+
 src: Contains the source code files.
 
 - Application.js: The main component that renders the application.
